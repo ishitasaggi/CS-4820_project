@@ -1,0 +1,7 @@
+<div class="home-container">
+    <h1>Welcome to the Home Screen</h1>
+    <label for="user-input">Enter your name:</label>
+    <input id="user-input" type="text" placeholder="Type something here" [(ngModel)]="userName" />
+    <p *ngIf="userName">Hello, {{ userName }}!</p>
+  </div>
+  
