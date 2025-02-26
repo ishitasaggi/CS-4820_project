@@ -8,5 +8,17 @@ import { Component } from '@angular/core';
 })
 export class HomeComponent {
   userName: string = '';
+  numCompartments: number | null = null;
+  compartmentError: boolean = false;
+
+  validateCompartments() {
+    if (this.numCompartments && this.numCompartments > 3) {
+      this.numCompartments = 3;  // Auto-set to max allowed value
+      this.compartmentError = true;
+    } else {
+      this.compartmentError = false;
+    }
+  }
+
 }
 

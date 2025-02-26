@@ -1,7 +1,29 @@
-<div class="home-container">
-    <h1>Welcome to the Home Screen</h1>
-    <label for="user-input">Enter your name:</label>
-    <input id="user-input" type="text" placeholder="Type something here"  />
-    <p>Hello, {{ userName }}!</p>
+<div>
+<h1 class="headline">Welcome to Predictive Dose Model</h1>
+  <div class="input-group">
+      <label for="drug-name">Enter Drug Name:</label>
+      <input id="drug-name" type="text" placeholder="e.g., Pembrolizumab" />
   </div>
-  
+
+  <div class="input-group">
+      <label for="drug-type">Enter Drug Type:</label>
+      <input id="drug-type" type="text" placeholder="e.g., Monoclonal Antibody" />
+  </div>
+
+  <div class="input-group">
+      <label for="initial-conc">Initial Concentration (mg/mL):</label>
+      <input id="initial-conc" type="number" placeholder="e.g., 10" />
+  </div>
+
+  <div class="input-group">
+    <label for="num-compartments">Number of Compartments:</label>
+    <select id="num-compartments" >
+        <option [value]="1">One</option>
+        <option [value]="2">Two</option>
+        <option [value]="3">Three</option>
+    </select>
+</div>
+
+
+  <button class="submit-btn">PREDICT</button>
+</div>
